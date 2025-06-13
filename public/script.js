@@ -171,6 +171,10 @@ function displayCertificate(certificate) {
                         <span class="detail-label">Certificate ID:</span>
                         <span class="detail-value">${certificate.CIN}</span>
                     </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Internship Track:</span>
+                        <span class="detail-value">${certificate.internshipTrack}</span>
+                    </div>
                 </div>
             </div>
             
