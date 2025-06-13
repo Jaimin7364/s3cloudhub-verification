@@ -177,7 +177,7 @@ function displayCertificate(certificate) {
             <div class="certificate-footer">
                 <div class="verification-stamp">
                     <p class="verified-text">✅ Verified by S3CloudHub</p>
-                    <p class="verification-date">Verified on: ${formattedVerificationDate}</p>
+                    <p class="verification-date">Verified on: ${certificate.verifiedDate}</p>
                 </div>
             </div>
         </div>

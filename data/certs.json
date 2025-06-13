@@ -4,20 +4,7 @@
     "startDate": "2025-05-20",
     "endDate": "2025-06-20",
     "duration": "1 month",
-    "CIN": "S3CH/MAY25/0126 "
-  },
-  {
-    "name": "Priya Sharma",
-    "startDate": "2025-06-01",
-    "endDate": "2025-09-01",
-    "duration": "3 months",
-    "CIN": "S3CH-2025-002"
-  },
-  {
-    "name": "Amit Patel",
-    "startDate": "2025-04-15",
-    "endDate": "2025-10-15",
-    "duration": "6 months",
-    "CIN": "S3CH-2025-003"
+    "CIN": "S3CH/MAY25/0126 ",
+    "verifiedDate": "2025-06-21"
   }
 ]
