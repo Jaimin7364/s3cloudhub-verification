@@ -132,6 +132,11 @@ function displayCertificate(certificate) {
     const certificateDiv = document.getElementById('certificate');
     const currentDate = new Date().toLocaleDateString();
     
+    // Set date to current date plus 7 days
+    const verificationDate = new Date();
+    verificationDate.setDate(verificationDate.getDate() + 7);
+    const formattedVerificationDate = verificationDate.toLocaleDateString();
+
     certificateDiv.innerHTML = `
         <div class="certificate-content">
             <div class="certificate-header">
@@ -172,7 +177,7 @@ function displayCertificate(certificate) {
             <div class="certificate-footer">
                 <div class="verification-stamp">
                     <p class="verified-text">✅ Verified by S3CloudHub</p>
-                    <p class="verification-date">Verified on: ${currentDate}</p>
+                    <p class="verification-date">Verified on: ${formattedVerificationDate}</p>
                 </div>
             </div>
         </div>
