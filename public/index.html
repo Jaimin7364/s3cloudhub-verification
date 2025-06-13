@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S3CloudHub - Certificate Verification</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="assets/logo.png" alt="S3CloudHub Logo" class="logo" onerror="this.style.display='none'">
+            <h1>S3CloudHub</h1>
+            <p class="subtitle">Certificate Verification System</p>
+        </header>
+
+        <main class="main-content">
+            <div class="verification-form">
+                <h2>Verify Certificate</h2>
+                <p class="form-description">Enter the intern's details to verify their certificate</p>
+                
+                <form id="verificationForm">
+                    <div class="form-group">
+                        <label for="name">Intern Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="startDate">Start Date:</label>
+                        <input type="date" id="startDate" name="startDate" required>
+                    </div>
+                    
+                    <button type="submit" class="verify-btn">Verify Certificate</button>
+                </form>
+
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Verifying certificate...</p>
+                </div>
+
+                <div id="result" class="result hidden"></div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 S3CloudHub. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

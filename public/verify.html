@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S3CloudHub - Certificate Verification Result</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="assets/logo.png" alt="S3CloudHub Logo" class="logo" onerror="this.style.display='none'">
+            <h1>S3CloudHub</h1>
+        </header>
+
+        <main class="verification-result">
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>Verifying certificate...</p>
+            </div>
+
+            <div id="certificate" class="certificate hidden">
+                <!-- Certificate content will be populated by JavaScript -->
+            </div>
+
+            <div id="error" class="error hidden">
+                <h2>Certificate Not Found</h2>
+                <p>The certificate could not be verified. Please check the details and try again.</p>
+                <a href="/" class="back-link">← Back to Verification</a>
+            </div>
+        </main>
+
+        <div class="verification-actions">
+            <a href="/" class="back-link">← Verify Another Certificate</a>
+            <button onclick="window.print()" class="print-btn">🖨️ Print Certificate</button>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2025 S3CloudHub. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Auto-verify if URL parameters are present
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get('name');
+            const startDate = urlParams.get('from');
+            
+            if (name && startDate) {
+                verifyCertificateFromURL(name, startDate);
+            }
+        });
+    </script>
+</body>
+</html>
